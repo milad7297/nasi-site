@@ -3,9 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your not welcome</title>
+    <title>Love You Nas</title>
 </head>
-<body>    <div style="display: flex; justify-content: space-between; align-items: center;">
+<body>
+  <title>Login Page</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          background: linear-gradient(to right, #6a11cb, #2575fc);
+      }
+      .login-container {
+          background: white;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          width: 300px;
+          text-align: center;
+      }
+      input[type="text"], input[type="password"] {
+          width: 100%;
+          padding: 10px;
+          margin: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+      button {
+          background-color: #6a11cb;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          width: 100%;
+      }
+      button:hover {
+          background-color: #2575fc;
+      }
+      .error {
+          color: red;
+          font-size: 14px;
+          margin-top: 10px;
+      }
+  </style>
+   <div class="login-container">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p class="error" id="error"></p>
+</div>
+
+<script>
+    // Username and password
+    const correctUsername = "Milad";
+    const correctPassword = "12345";
+
+    function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === correctUsername && password === correctPassword) {
+            alert("Login successful!");
+            window.location.href = "https://milad7297.github.io/nasi-site/"; // صفحه‌ای که می‌خواهی باز شود
+        } else {
+            document.getElementById("error").textContent = "Invalid username or password.";
+        }
+    }
+</script>
+      <div style="display: flex; justify-content: space-between; align-items: center;">
   <img src="photo_2024-12-20_18-42-44.jpg" alt="Left Image" style="width: 200px; height: auto; border-radius: 10px;">
   <div>
       <!-- محتوای اصلی صفحه -->
